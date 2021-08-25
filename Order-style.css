@@ -259,7 +259,7 @@ marquee{
     border-radius: 10px;
     margin: 20px auto;
     width:85%;
-    background-image:url("images/searchbarimgblur.jpg")  ;
+    background-image:url("/searchbarimgblur.jpg")  ;
     
 
     padding: 60px 20px;
