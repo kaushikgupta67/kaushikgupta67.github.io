@@ -1,0 +1,214 @@
+/*  */
+*{
+    margin:0 0;
+    padding:0 0;
+}
+body {
+    background-color: rgba(235, 235, 235, 0.788);
+}
+nav, marquee{
+    /* border: 3px solid grey; */
+    
+    background: 
+    linear-gradient(to right, #ffed4b42 0%, #FFFFAC 4%, #D1B464 25%, #c9a146d3 62.5%, #d89e16e0 100%),
+    linear-gradient(to left, #ffed4b42 0%, #FFFFAC 4%, #D1B464 25%, #c9a146d3 62.5%, #d89e16e0 100%);
+    
+    /* background: linear-gradient(120deg, #BF953F,  #FBF5B7,#B38728,#AA771C, #FCF6BA, #AA771C); */
+
+    margin:0 auto;
+    box-shadow:0px 2px 14px rgb(131, 131, 131);
+}
+
+nav  a , .logotext{
+    text-decoration: none;
+}
+nav .logo{
+    /* border: 1px solid green; */
+    float:left;
+    margin: 0 10px;
+}
+nav a:link, nav a:active, nav a:visited{
+    color:black;
+}
+.logotext h1{
+    vertical-align: middle;
+    font-family: 'Marcellus SC', serif;
+    display: inline-block;
+   color:black;
+    line-height: 60px;
+    font-size: 40px;
+}
+.imgresponsive{
+    vertical-align: middle;
+    height: 45px;
+    width: 45px;
+}
+.clearfix{
+    clear:both;
+    float:none;
+}
+nav .links {
+    /* border: 1px solid green; */
+    color:black;
+    list-style-type: none;
+
+}
+nav .links ul li{
+    display: inline;
+    padding: 0.7% 1.1%;
+    margin: 0 1.1%;
+    /* border: 1px solid blueviolet; */
+    border-radius: 6%;
+    line-height: 60px;
+    font-size:large;
+    color:black;
+    
+}
+nav .links ul li:hover{
+    background-color: #ffd9799d;
+    
+}
+.text-right-align{
+    text-align: right;
+}
+.slides{
+    margin:20px auto;
+    border: 1px solid lightcoral;
+}
+
+.about-us{
+    width: 85%;
+    /* border: 1px solid lightcoral; */
+    
+    display:flex;
+    padding: 10px 20px;
+    background-color: rgba(216, 216, 216, 0.425);
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+.about-us .coverimage{
+    width: 40%;
+    /* border: 1px solid blue; */
+    
+    margin:0 auto;
+    float: left;
+    text-align: center;
+}
+.coverimage{
+    vertical-align: middle;
+}
+.coverimage img{
+    max-width: 85%;
+    margin:auto auto;
+    padding:0 auto;
+    vertical-align: middle;
+    border-radius: 5%;
+}
+.about-us .aboutdata{
+    width:60%;
+    /* border: 14px solid green; */
+    margin:none;
+    float:right;
+    padding:1%;
+    
+}
+.aboutdata h3{
+    text-align:center;
+    line-height: 2.5;
+}
+.aboutdata p{
+    font-size: large;
+    line-height: 1.7;
+}
+.gallery{
+    
+    width:85%;
+    padding: 10px 20px;
+    background-color: rgba(216, 216, 216, 0.425);
+    border-radius: 10px;
+    margin: 10px auto;
+
+}
+
+.sectiontitle{
+    font-family: 'Playfair Display',serif;
+    
+}
+.sectionsubtitle{
+    font-family: 'Playfair Display',serif;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+.contact{
+    padding: 10px 20px;
+    /* padding-bottom: 20px; */
+    background-color: rgba(216, 216, 216, 0.425);
+    border-radius: 10px;
+    margin: 10px auto;
+    width:85%;
+}
+
+.contactslist{
+    list-style-type: none;
+    line-height: 2;
+    /* padding-left: 12px; */
+    vertical-align: middle;
+    /* display: inline; */
+}
+.contactslist li{
+    display: inline;
+    padding-left:10px;
+}
+
+.contactslist a{
+    text-decoration: none;
+}
+
+.contactslist a:link, .contactslist a:active, .contactslist a:visited{
+    color:rgb(125, 56, 255);
+    /* color:black; */
+}
+.contactslist a:hover{
+    color:rgb(79, 49, 136);
+}
+
+.contactslist address{
+display: inline;
+
+
+}
+.map{
+    display:block;
+    margin: 0 auto;
+}
+footer{
+    margin: 0 auto;
+    
+    /* border: 1px solid red; */
+}
+marquee{
+    line-height: 2;
+    border-radius: 12px;
+}
+/* .addrline{
+    
+} */
+.social h3{
+    display:block;
+    margin: 0 auto;
+    text-align:center;
+}
+.social img{
+    width: 35px;
+    height: 35px;
+}
+.social h3 a{
+    text-decoration: none;
+    line-height: 5;
+    padding: 10px;
+}
+.footerinfo{
+    text-align: center;
+}
