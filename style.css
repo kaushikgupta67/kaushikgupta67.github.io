@@ -91,7 +91,7 @@ nav .links ul li:hover{
     width: 40%;
     /* border: 1px solid blue; */
     
-    margin:0 auto;
+    margin:auto auto;
     float: left;
     text-align: center;
 }
