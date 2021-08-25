@@ -91,7 +91,7 @@ nav .links ul li:hover{
     width: 40%;
     /* border: 1px solid blue; */
     
-    margin:auto auto;
+    margin:0 auto;
     float: left;
     text-align: center;
 }
@@ -100,7 +100,7 @@ nav .links ul li:hover{
 }
 .coverimage img{
     max-width: 85%;
-    margin:0 auto;
+    margin:auto auto;
     padding:0 auto;
     vertical-align: middle;
     border-radius: 5%;
