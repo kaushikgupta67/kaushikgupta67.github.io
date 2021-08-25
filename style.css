@@ -3,7 +3,10 @@
     margin:0 0;
     padding:0 0;
 }
-nav{
+body {
+    background-color: rgba(235, 235, 235, 0.788);
+}
+nav, marquee{
     /* border: 3px solid grey; */
     
     background: 
@@ -13,6 +16,7 @@ nav{
     /* background: linear-gradient(120deg, #BF953F,  #FBF5B7,#B38728,#AA771C, #FCF6BA, #AA771C); */
 
     margin:0 auto;
+    box-shadow:0px 2px 14px rgb(131, 131, 131);
 }
 
 nav  a , .logotext{
@@ -30,7 +34,7 @@ nav a:link, nav a:active, nav a:visited{
     vertical-align: middle;
     font-family: 'Marcellus SC', serif;
     display: inline-block;
-   
+   color:black;
     line-height: 60px;
     font-size: 40px;
 }
@@ -45,7 +49,7 @@ nav a:link, nav a:active, nav a:visited{
 }
 nav .links {
     /* border: 1px solid green; */
-    
+    color:black;
     list-style-type: none;
 
 }
@@ -57,6 +61,7 @@ nav .links ul li{
     border-radius: 6%;
     line-height: 60px;
     font-size:large;
+    color:black;
     
 }
 nav .links ul li:hover{
@@ -67,15 +72,19 @@ nav .links ul li:hover{
     text-align: right;
 }
 .slides{
-    margin:0 auto;
+    margin:20px auto;
     border: 1px solid lightcoral;
 }
 
 .about-us{
     width: 85%;
     /* border: 1px solid lightcoral; */
-    margin: 0 auto;
+    
     display:flex;
+    padding: 10px 20px;
+    background-color: rgba(216, 216, 216, 0.425);
+    border-radius: 10px;
+    margin: 10px auto;
 }
 
 .about-us .coverimage{
@@ -90,7 +99,7 @@ nav .links ul li:hover{
     vertical-align: middle;
 }
 .coverimage img{
-    max-width: 100%;
+    max-width: 85%;
     margin:0 auto;
     padding:0 auto;
     vertical-align: middle;
@@ -113,17 +122,62 @@ nav .links ul li:hover{
     line-height: 1.7;
 }
 .gallery{
-    margin: 0 auto;
+    
     width:85%;
+    padding: 10px 20px;
+    background-color: rgba(216, 216, 216, 0.425);
+    border-radius: 10px;
+    margin: 10px auto;
+
 }
 
 .sectiontitle{
     font-family: 'Playfair Display',serif;
+    
 }
 .sectionsubtitle{
     font-family: 'Playfair Display',serif;
     text-align: center;
     letter-spacing: 1.5px;
+}
+
+.contact{
+    padding: 10px 20px;
+    /* padding-bottom: 20px; */
+    background-color: rgba(216, 216, 216, 0.425);
+    border-radius: 10px;
+    margin: 10px auto;
+    width:85%;
+}
+
+.contactslist{
+    list-style-type: none;
+    line-height: 2;
+    /* padding-left: 12px; */
+    vertical-align: middle;
+    /* display: inline; */
+}
+.contactslist li{
+    display: inline;
+    padding-left:10px;
+}
+
+.contactslist a{
+    text-decoration: none;
+}
+
+.contactslist a:link, .contactslist a:active, .contactslist a:visited{
+    color:rgb(125, 56, 255);
+    /* color:black; */
+}
+.contactslist a:hover{
+    color:rgb(79, 49, 136);
+}
+
+.contactslist address{
+display: inline;
+
+
 }
 .map{
     display:block;
@@ -131,8 +185,12 @@ nav .links ul li:hover{
 }
 footer{
     margin: 0 auto;
-    width:85%;
-    border: 1px solid red;
+    
+    /* border: 1px solid red; */
+}
+marquee{
+    line-height: 2;
+    border-radius: 12px;
 }
 /* .addrline{
     
