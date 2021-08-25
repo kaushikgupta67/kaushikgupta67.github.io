@@ -1,0 +1,90 @@
+/*  */
+
+.btn
+{
+    padding: 1.3%;
+    background-color: #DAA520;
+    border-radius: 10px;
+    border: 0px;
+}
+
+.category
+{
+    background-color: rgba(216, 216, 216, 0.425);
+    border-radius: 10px;
+    margin: 10px auto;
+    width:85%;
+    padding: 10px 20px;
+    text-align: center;
+
+
+}
+.category img{
+    /* width:100%;
+    height:100%; */
+
+    width: 200px; height:200px; object-fit: cover;
+    border-radius: 10px;
+
+}
+
+.cat{
+    /* border: 1px solid red; */
+    width:30%;
+    float:left;
+    margin:2% 1% ;
+
+
+
+}
+.sectiontitle{
+    font-family: 'Playfair Display',serif;
+    
+}
+.sectionsubtitle{
+    font-family: 'Playfair Display',serif;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+.foodsearch
+{
+    /* background-color: rgba(216, 216, 216, 0.425); */
+    border-radius: 10px;
+    margin: 20px auto;
+    width:85%;
+    background-image:url("/searchbarimgblur.jpg")  ;
+    
+
+    padding: 60px 20px;
+    text-align: center;
+    border: 0px;
+}
+
+.foodsearch input[type="searchitem"] 
+{
+    width: 65%;
+    padding: 1.3%;
+    margin: 5px 5px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 0px;
+}
+
+
+.float-responsive
+{
+    position: relative;
+}
+
+.float-text
+{
+    /* position: absolute; */
+    bottom:23px;
+    left:40%;
+}
+
+.text-white
+{
+    color:black;
+}
