@@ -43,6 +43,31 @@ a .cat:hover
     transform: scale(1.05);
 }
 
+.food-menu
+{
+    background-color: rgba(216, 216, 216, 0.425);
+    border-radius: 10px;
+    margin: 10px auto;
+    width:85%;
+    padding: 10px 20px;
+    /* text-align: center; */
+}
+
+.S{
+    border: 1px solid red;
+    width: 45%;
+    float: left;
+}
+
+.S img{
+    width:100px;
+    height: 100px;
+    float:left;
+}
+.S pre{
+    
+    font-size: 1rem;
+}
 
 .sectiontitle{
     font-family: 'Playfair Display',serif;
