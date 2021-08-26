@@ -95,7 +95,7 @@ a .cat:hover
     width:100%;
     height: 100%;
     /* position: relative; */
-    border-radius: 13%;
+    border-radius: 13px;
 }
 
 .sectiontitle{
@@ -164,7 +164,7 @@ a .cat:hover
     text-decoration: none;
     
     float:left;
-    border-radius: 10%;
+    border-radius: 5px;
     
     margin-left: 1.5%;
 
@@ -173,6 +173,6 @@ a .cat:hover
 .Order-btn a
 {
     text-decoration: none;
-    border-radius: 30%;
+    /* border-radius: 30px; */
 
 }
