@@ -41,6 +41,7 @@
 a .cat:hover
 {
     transform: scale(1.05);
+    cursor: pointer;
 }
 
 .food-menu
@@ -56,13 +57,23 @@ a .cat:hover
 .starters h1{
     text-align: center;
 }
+
+
+.Cat-button
+{
+    border:none;
+    background-color: none;
+}
+.starters{
+    display: none;
+}
 .qty
 {
     float:left;
 
 }
 .S{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 46%;
     float: left;
     margin-left: 1.5%;
@@ -176,3 +187,9 @@ a .cat:hover
     /* border-radius: 30px; */
 
 }
+
+
+
+html {
+    scroll-behavior: smooth;
+  }

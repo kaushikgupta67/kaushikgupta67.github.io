@@ -23,6 +23,11 @@
     <link rel="icon" href="media/logo.png" type="image/x-icon">
 
     <title>Cuisine Haveli</title>
+
+
+
+
+
 </head>
 
 <body>
@@ -77,7 +82,8 @@
 
 
         <section class="category">
-            <a href="">
+
+            <a  onclick="fun()">
             <div class="Starters cat float-responsive">
                 <img src="media/starters.jpg" alt="starters">
 
@@ -142,7 +148,9 @@
 
         <section class="food-menu">
             <h1>Food Menu</h1>
-            <div class="starters">
+
+            <button onclick="fun()" class="Cat-button"><h1>Starters</h1></button>
+            <div id="startersScroll" class="starters">
                 
                 <h1>Starters</h1>
                 <div class="S">
@@ -262,7 +270,15 @@
 
 
 
-
+        <script>
+            function fun()
+            {
+                // alert("Hello");
+                var elmntToView = document.getElementById("startersScroll");
+                elmntToView.style.display="block";
+            elmntToView.scrollIntoView(); 
+            }
+            </script>
     </main>
     <!-- main content ends -->
     <!-- footer starts-->
