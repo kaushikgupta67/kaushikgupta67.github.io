@@ -71,7 +71,10 @@
     border: 0px;
 }
 
-
+.foodsearch input[type="submit"]:hover{
+    background-color:darkgoldenrod;
+    cursor: pointer;
+}
 .float-responsive
 {
     position: relative;
