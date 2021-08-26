@@ -53,22 +53,49 @@ a .cat:hover
     /* text-align: center; */
 }
 
+.starters h1{
+    text-align: center;
+}
+.qty
+{
+    float:left;
+
+}
 .S{
     border: 1px solid red;
-    width: 45%;
+    width: 46%;
     float: left;
+    margin-left: 1.5%;
 }
 
-.S img{
+.S h1
+{
+    text-align: center;
+}
+.desc
+{
+    float:left;
+    width:70%;
+    margin-left: 3%;
+    
+}
+
+.Itemimg{
     width:100px;
     height: 100px;
-    float:left;
-}
-.S p{
+    /* margin: 0 30%; */
+    float: left;
+    margin-left: 1%;
     
-    font-size: 1rem;
-    display: inline;
-    margin: 0 32%;
+    /* position: absolute; */
+    
+}
+
+.Itemimg img{
+    width:100%;
+    height: 100%;
+    /* position: relative; */
+    border-radius: 13%;
 }
 
 .sectiontitle{
@@ -127,11 +154,25 @@ a .cat:hover
 }
 
 
-.order-btn {
-    display: inline;
-    border: 1px solid red;
+
+
+.Order-btn {
+    /* display: inline; */
+    border: 0px;
     background-color: #FF2400;
-    margin: 0 30%;
+    /* margin: 0 30%; */
     text-decoration: none;
+    
+    float:left;
+    border-radius: 10%;
+    
+    margin-left: 1.5%;
+
+}
+
+.Order-btn a
+{
+    text-decoration: none;
+    border-radius: 30%;
 
 }
