@@ -33,10 +33,17 @@
     width:30%;
     float:left;
     margin:2% 1% ;
+    height: 20%;
 
 
 
 }
+a .cat:hover
+{
+    transform: scale(1.05);
+}
+
+
 .sectiontitle{
     font-family: 'Playfair Display',serif;
     
