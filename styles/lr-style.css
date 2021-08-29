@@ -1,0 +1,27 @@
+.lrform{
+    width:35%;
+    max-width: 350px;
+    /* height:68%; */
+    background:  linear-gradient(45deg, #ffed4b0a 0%, #ffffac71 4%, #d1b46480 25%, #c9a2464d 62.5%, #d89e163f 100%),
+    linear-gradient(225deg, #ffed4b18 0%, #ffffac9f 4%, #d1b464c2 25%, #c9a2466e 62.5%, #d89e1660 100%);
+    margin: 20px auto;
+    
+    border-radius: 15px;
+    padding: 20px;
+}
+.login{
+    margin:auto;
+    width: 100%;
+}
+
+.login input, button{
+    width:70%;
+    border-radius:5px;
+    border:none;
+    padding:5%;
+    margin:5%;
+}
+
+.lgrow{
+    text-align: center;
+}
