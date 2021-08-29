@@ -54,6 +54,8 @@ a .cat:hover
     /* text-align: center; */
 }
 
+
+
 .starters h1{
     text-align: center;
 }
@@ -192,4 +194,10 @@ a .cat:hover
 
 html {
     scroll-behavior: smooth;
+  }
+
+
+  .sub-cat h1
+  {
+    text-align: center;
   }

@@ -1,21 +1,7 @@
-function fun()
+function fun(id)
 {
     // alert("Hello");
-    var elmntToView = document.getElementById("startersScroll");
-
-    if(elmntToView.style.display=="block")
-        elmntToView.style.display="none";
-    else
-        elmntToView.style.display="block";
-
-    elmntToView.scrollIntoView(); 
-
-}
-
-function fun2()
-{
-    // alert("Hello");
-    var elmntToView = document.getElementById("soupsScroll");
+    var elmntToView = document.getElementById((id+"Scroll"));
 
     if(elmntToView.style.display=="block")
         elmntToView.style.display="none";
