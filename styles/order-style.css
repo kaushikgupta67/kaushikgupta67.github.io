@@ -56,18 +56,12 @@ a .cat:hover
 
 
 
-.starters h1{
-    text-align: center;
-}
-
 
 .Cat-button
 {
     border:none;
     background-color: none;
-}
-.starters{
-    display: none;
+    margin:none;
 }
 .qty
 {
