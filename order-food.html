@@ -25,10 +25,6 @@
 
     <title>Cuisine Haveli</title>
 
-
-
-
-
 </head>
 
 <body>
@@ -58,14 +54,11 @@
     </nav>
     <!-- navbar ends -->
     <!-- header ends -->
-    <!-- main content starts -->
-    <!-- clearfix  -->
+   
 
     <main>
-
-
-
-
+ <!-- main content starts -->
+   
         <!-- Search section starts -->
         <section class="foodsearch" id="food-search">
             <form action="">
@@ -73,466 +66,327 @@
                 <input type="searchitem" name="search" placeholder="Search for food Items">
                 <input type="submit" name="submit" value="Search" class="btn">
             </form>
-
-
         </section>
-
         <!-- Search section ends -->
 
         <!-- Category section starts -->
-
-
         <section class="category">
-
             <a  id="starters" onclick="fun(this.id)">
-            <div class="Starters cat float-responsive">
-                <img src="media/starters.jpg" alt="starters">
-
-
-                <h3 class="float-text text-white">Starters</h3>
-            </div>
-        </a>
-
+                <div class="Starters cat float-responsive">
+                    <img src="media/starters.jpg" alt="starters">
+                    <h3 class="float-text text-white">Starters</h3>
+                </div>
+            </a>
             <a id="soups"onclick="fun(this.id)">
-            <div class="Soups&Salads cat float-responsive">
-
-                <img src="media/soupandsalads.jpeg" alt="starters">
-
-                <h3 class="float-text text-white">Soups & Saladas</h3>
-            </div>
-        </a>
-
-            <!-- <div class="Maincourse cat">
-                <h2>Main Course</h2>
-            </div> -->
-
+                <div class="Soups&Salads cat float-responsive">
+                    <img src="media/soupandsalads.jpeg" alt="starters">
+                    <h3 class="float-text text-white">Soups & Saladas</h3>
+                </div>
+            </a>
             <a id="breads"onclick="fun(this.id)">
-            <div class="Breads cat float-responsive">
-
-                <img src="media/bread.jpg" alt="starters">
-                <h3 class="float-text text-white">Breads</h3>
-            </div>
-        </a>
+                <div class="Breads cat float-responsive">
+                    <img src="media/bread.jpg" alt="starters">
+                    <h3 class="float-text text-white">Breads</h3>
+                </div>
+            </a>
             <a id="rice"onclick="fun(this.id)">
-            <div class="Rice&Biriyani cat float-responsive">
-                <img src="media/biriyani.jpg" alt="starters">
-                <h3 class="float-text text-white">Rice & Biriyani</h3>
-            </div>
-
+                <div class="Rice&Biriyani cat float-responsive">
+                    <img src="media/biriyani.jpg" alt="starters">
+                    <h3 class="float-text text-white">Rice & Biriyani</h3>
+                </div>
+            </a>
             <a id="chinese"onclick="fun(this.id)">
-            <div class="Chinese cat float-responsive">
-                <img src="media/chinese.jfif" alt="starters">
-                <h3 class="float-text text-white">Chinese</h3>
-             </div>
+                <div class="Chinese cat float-responsive">
+                    <img src="media/chinese.jfif" alt="starters">
+                    <h3 class="float-text text-white">Chinese</h3>
+                </div>
             </a>
-
             <a id="desserts"onclick="fun(this.id)">
-            <div class="Desserts&Beverages cat float-responsive">
-                <img src="media/desserts.jpg" alt="starters">
-                <h3 class="float-text text-white">Desserts & Beverages</h3>
-            </div>
+                <div class="Desserts&Beverages cat float-responsive">
+                    <img src="media/desserts.jpg" alt="starters">
+                    <h3 class="float-text text-white">Desserts & Beverages</h3>
+                </div>
             </a>
-
+            <!-- clearfix -->
             <div class="clearfix">
-
             </div>
 
         </section>
-
-
         <!-- Category section ends -->
 
 
 
 
         <!-- Food Item section starts -->
-
         <section class="food-menu">
-           
-           
             <h1>Food Menu</h1>
-
-            
             <div id="startersScroll" class="sub-cat">
+
                 <button onclick="fun('starters')" class="Cat-button"><h1>Starters</h1></button>
-                
-               
+
                 <div class="S">
-                    
-
                     <div class="Itemimg">
-
                         <img src="../media/crispycorn.jpg">
                     </div>
-
-                    
                     <div class="desc">
-                            <div class="itemname">
+                        <div class="itemname">
                             <h3>Crispy Corn</h3>
-                            </div>
-
-                            <div class="itemprice">
-                                <h4>Rs: 180 /-</h4>
-                                </div>
-
-                            <div class="itemdesc">
-                                
-                                A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
-                                </div>
-
-                            <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
-                            <div class="Order-btn">
+                        </div>
+                        <div class="itemprice">
+                            <h4>Rs: 180 /-</h4>
+                        </div>
+                        <div class="itemdesc">  
+                            A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
+                        </div>
+                        <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
+                        <div class="Order-btn">
                             <a href="">
                                 Order Now
                             </a>
-                            </div>
-                    
+                        </div>
                     </div>
-
                 </div>
 
                 <div class="S">
-                    
                     <div class="Itemimg">
-
                         <img src="../media/vegmanchuria.jpg">
                     </div>
-
-                    
                     <div class="desc">
-                            <div class="itemname">
+                        <div class="itemname">
                             <h3>Veg Munchuria</h3>
-                            </div>
-
-                            <div class="itemprice">
-                                <h4>Rs: 280 /-</h4>
-                                </div>
-
-                            <div class="itemdesc">
-                                
-                                A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
-                                </div>
-
-                            <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
-                            <div class="Order-btn">
+                        </div>
+                        <div class="itemprice">
+                            <h4>Rs: 280 /-</h4>
+                        </div>
+                        <div class="itemdesc"> 
+                            A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
+                        </div>
+                        <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
+                        <div class="Order-btn">
                             <a href="">
                                 Order Now
                             </a>
-                            </div>
-                    
+                        </div>
                     </div>
-
                 </div>
 
                 <div class="S">
-                    
                     <div class="Itemimg">
-
                         <img src="../media/paneer65.jpg">
                     </div>
-
-                    
                     <div class="desc">
-                            <div class="itemname">
+                        <div class="itemname">
                             <h3>Paneer 65</h3>
-                            </div>
-
-                            <div class="itemprice">
-                                <h4>Rs: 280 /-</h4>
-                                </div>
-
-                            <div class="itemdesc">
-                                
-                                A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
-                                </div>
-
-                            <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
-                            <div class="Order-btn">
+                        </div>
+                        <div class="itemprice">
+                            <h4>Rs: 280 /-</h4>
+                        </div>
+                        <div class="itemdesc"> 
+                            A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
+                        </div>
+                        <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
+                        <div class="Order-btn">
                             <a href="">
                                 Order Now
                             </a>
-                            </div>
-                    
+                        </div>
                     </div>
-
                 </div>
 
                 <div class="S">
-                    
                     <div class="Itemimg">
-
                         <img src="../media/chickencheesefries.jpg">
                     </div>
-
-                    
                     <div class="desc">
-                            <div class="itemname">
+                        <div class="itemname">
                             <h3>Chicken Cheese Fries</h3>
-                            </div>
-
-                            <div class="itemprice">
-                                <h4>Rs: 385 /-</h4>
-                                </div>
-
-                            <div class="itemdesc">
-                                
-                                A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
-                                </div>
-
-                            <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
-                            <div class="Order-btn">
+                        </div>
+                        <div class="itemprice">
+                            <h4>Rs: 385 /-</h4>
+                        </div>
+                        <div class="itemdesc">
+                            A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
+                        </div>
+                        <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
+                        <div class="Order-btn">
                             <a href="">
                                 Order Now
                             </a>
-                            </div>
-
+                        </div>
                     </div>
-
-
                 </div>
-                    </div>
-                    <div class="clearfix">
 
-                    </div>
+            </div>
+                    
+            <div class="clearfix">
+            </div>
                 
-<br>
-<br>
+
+            <br>
+            <br>
 
                 <!-- Soups Category Starts Here  -->
-
-               
                 <div id="soupsScroll" class="sub-cat">
+
+                    
                     <button onclick="fun('soups')" class="Cat-button"><h1>Soups</h1></button>
 
-
-                
-                  
-                    <div class="S">
-                        
-    
+                    
+                    <div class="S"> 
                         <div class="Itemimg">
-    
                             <img src="../media/vegmanchowsoup.jpg">
                         </div>
-    
-                        
                         <div class="desc">
-                                <div class="itemname">
+                            <div class="itemname">
                                 <h3>Veg Manchow Soup</h3>
-                                </div>
-    
-                                <div class="itemprice">
-                                    <h4>Rs: 119 /-</h4>
-                                    </div>
-    
-                                <div class="itemdesc">
-                                    
-                                    A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
-                                    </div>
-    
-                                <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
-                                <div class="Order-btn">
+                            </div>
+                            <div class="itemprice">
+                                <h4>Rs: 119 /-</h4>
+                            </div>
+                            <div class="itemdesc">
+                                A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
+                            </div>
+                            <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
+                            <div class="Order-btn">
                                 <a href="">
                                     Order Now
                                 </a>
+                            </div>
                         </div>
-                        
                     </div>
     
 
-                    </div>
-    
                     <div class="S">
-                        
                         <div class="Itemimg">
-    
                             <img src="../media/basilsoup.jpg">
                         </div>
-    
-                        
                         <div class="desc">
-                                <div class="itemname">
+                            <div class="itemname">
                                 <h3>Basil Soup</h3>
-                                </div>
-    
-                                <div class="itemprice">
-                                    <h4>Rs: 119 /-</h4>
-                                    </div>
-    
-                                <div class="itemdesc">
-                                    
-                                    A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
-                                    </div>
-    
-                                <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
-                                <div class="Order-btn">
+                            </div>
+                            <div class="itemprice">
+                                <h4>Rs: 119 /-</h4>
+                            </div>
+                            <div class="itemdesc">
+                                A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
+                            </div>
+                            <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
+                            <div class="Order-btn">
                                 <a href="">
                                     Order Now
                                 </a>
-                                </div>
-
+                            </div>
                         </div>
-
                     </div>
-    
-                    <div class="S">
-                        
-                        <div class="Itemimg">
-    
-                            <img src="../media/nonveghotandsoursoup.jpg">
-                        </div>
-    
-                        
-                        <div class="desc">
-                                <div class="itemname">
-                                <h3>Non Veg Hot & Sour Soup</h3>
-                                </div>
-    
-                                <div class="itemprice">
-                                    <h4>Rs: 150 /-</h4>
-                                    </div>
-    
-                                <div class="itemdesc">
-                                    
-                                    A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
-                                    </div>
-    
-                                <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
-                                <div class="Order-btn">
-                                <a href="">
-                                    Order Now
-                                </a>
-                                </div>
-                        
-                        </div>
-    
-    
-                    </div>
-    
-                    <div class="S">
-                        
-                        <div class="Itemimg">
-    
-                            <img src="../media/burntgarlicsoupnonveg.png">
-                        </div>
-    
-                        
-                        <div class="desc">
-                                <div class="itemname">
-                                <h3>Burnt Garlic Soup Non-veg</h3>
-                                </div>
-    
-                                <div class="itemprice">
-                                    <h4>Rs: 149 /-</h4>
-                                    </div>
-    
-                                <div class="itemdesc">
-                                    
-                                    A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
-                                    </div>
-    
-                                <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
-                                <div class="Order-btn">
-                                <a href="">
-                                    Order Now
-                                </a>
-                                </div>
-                        
-                        </div>
     
                     
-
+                    <div class="S">
+                        <div class="Itemimg">
+                            <img src="../media/nonveghotandsoursoup.jpg">
+                        </div>
+                        <div class="desc">
+                            <div class="itemname">
+                                <h3>Non Veg Hot & Sour Soup</h3>
+                            </div>
+                            <div class="itemprice">
+                                <h4>Rs: 150 /-</h4>
+                            </div>
+                            <div class="itemdesc">
+                                A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
+                            </div>
+                            <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
+                            <div class="Order-btn">
+                                <a href="">
+                                    Order Now
+                                </a>
+                            </div>
+                        </div>
                     </div>
-
+    
+                    <div class="S">
+                        <div class="Itemimg">
+                            <img src="../media/burntgarlicsoupnonveg.png">
+                        </div>
+                        <div class="desc">
+                            <div class="itemname">
+                                <h3>Burnt Garlic Soup Non-veg</h3>
+                            </div>
+                            <div class="itemprice">
+                                <h4>Rs: 149 /-</h4>
+                            </div>
+                            <div class="itemdesc">
+                                A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
+                            </div>
+                            <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
+                            <div class="Order-btn">
+                                <a href="">
+                                    Order Now
+                                </a>
+                            </div>
+                        </div>
                     </div>
+                </div>
+
                 <div class="clearfix">
 
                 </div>
-
-            
-
-                
-
                 <br>
                 <br>
                 
+
                 <!-- Breads Section Starts Here -->
-
-
-       
                 <div id="breadsScroll" class="sub-cat">
                     <button onclick="fun('breads')" class="Cat-button"><h1>Breads</h1></button>
                 
                     
                     <div class="S">
-                        
-    
                         <div class="Itemimg">
-    
                             <img src="../media/butternaan.jpg">
                         </div>
-    
-                        
                         <div class="desc">
-                                <div class="itemname">
+                            <div class="itemname">
                                 <h3>Butter Naan</h3>
-                                </div>
-    
-                                <div class="itemprice">
-                                    <h4>Rs: 60 /-</h4>
-                                    </div>
-    
-                                <div class="itemdesc">
-                                    
-                                    A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
-                                    </div>
-    
-                                <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
-                                <div class="Order-btn">
+                            </div>
+                            <div class="itemprice">
+                                <h4>Rs: 60 /-</h4>
+                            </div>
+                            <div class="itemdesc">
+                                A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
+                            </div>
+                            <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
+                            <div class="Order-btn">
                                 <a href="">
                                     Order Now
                                 </a>
+                            </div>
                         </div>
-                        
                     </div>
     
 
-                    </div>
-    
                     <div class="S">
-                        
                         <div class="Itemimg">
-    
                             <img src="../media/lachaparatha.jpg">
                         </div>
-    
-                        
                         <div class="desc">
-                                <div class="itemname">
-                                <h3>
-                                    Lacha Paratha</h3>
-                                </div>
-    
-                                <div class="itemprice">
-                                    <h4>Rs: 69 /-</h4>
-                                    </div>
-    
-                                <div class="itemdesc">
-                                    
-                                    A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
-                                    </div>
-    
-                                <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
-                                <div class="Order-btn">
+                            <div class="itemname">
+                                Lacha Paratha
+                            </div>
+                            <div class="itemprice">
+                                69
+                            </div>
+                            <div class="itemdesc">
+                                A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a perfect snack!.
+                            </div>
+                            <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
+                            <div class="Order-btn">
                                 <a href="">
                                     Order Now
                                 </a>
-                                </div>
-
+                            </div>
                         </div>
-
                     </div>
-    
+
+                    
                     <div class="S">
                         
                         <div class="Itemimg">
