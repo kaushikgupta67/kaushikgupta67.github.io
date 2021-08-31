@@ -145,9 +145,39 @@ nav .links ul li:hover{
     background-color: rgba(216, 216, 216, 0.425);
     border-radius: 10px;
     margin: 10px auto;
-
+    text-align: center;
 }
-
+.gallery .galleryitem{
+    text-align: center;
+    width:24.5%;
+    
+    max-width: 24.5%;
+    object-fit: cover;
+    
+    margin: 10px;
+    border: 2px solid grey;
+    border-radius: 7px;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+.galleryitem:hover{
+    border: 2px solid black;
+}
+.gallery .galleryitem img{
+    text-align: center;
+    vertical-align: middle;
+    /* height: 180px; */
+    overflow: hidden;
+    height: 180px;
+    max-height: 180px;
+    width: 400px;
+    /* min-height: 180px; */
+    object-fit: cover;
+    
+}
+  
 .sectiontitle{
     font-family: 'Playfair Display',serif;
     
