@@ -139,7 +139,7 @@ a .cat:hover
     border: 0px;
 }
 
-.foodsearch input[type="submit"]:hover{
+.foodsearch input[type="submit"]:hover, .Cat-button:hover{
     background-color:darkgoldenrod;
     cursor: pointer;
 }
@@ -190,8 +190,8 @@ html {
     scroll-behavior: smooth;
   }
 
-
+/* 
   .sub-cat h1
   {
     text-align: center;
-  }
+  } */

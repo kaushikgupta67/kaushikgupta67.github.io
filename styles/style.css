@@ -72,8 +72,24 @@ nav .links ul li:hover{
     text-align: right;
 }
 .slides{
-    margin:20px auto;
-    border: 1px solid lightcoral;
+    /* margin:20px auto; */
+    margin:none;
+    /* border: 1px solid lightcoral; */
+    overflow: hidden;
+    width: 100%;
+    height: 90vh;
+}
+.slides img{
+    margin : 0 auto;
+    /* overflow: hidden; */
+    min-width:100%; 
+    min-height:100%; 
+    width:auto; 
+    height:auto; 
+    overflow: hidden;
+    
+    object-fit: cover;
+   
 }
 
 .about-us{
@@ -91,13 +107,14 @@ nav .links ul li:hover{
     width: 40%;
     /* border: 1px solid blue; */
     
-    margin:0 auto;
+    margin:auto auto;
     float: left;
     text-align: center;
 }
 .coverimage{
     vertical-align: middle;
 }
+
 .coverimage img{
     max-width: 85%;
     margin:auto auto;
