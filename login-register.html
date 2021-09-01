@@ -6,7 +6,7 @@
     <!-- responsive website tags -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS link -->
+    <!-- CSS link --> 
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/lr-style.css">
 
@@ -68,39 +68,23 @@
 
     <main>
         <form action="" method="post" class="lrform">
-
-
-            <table class="login">
-                <tr class="lgrow">
-                    <!-- <td>
-                        <label for="email">E-Mail: </label>
-                    </td> -->
-                    <td> <input type="email" name="email" id="email" placeholder="E-Mail">
-                    </td>
-                </tr>
-                <tr class="lgrow">
-                    <!-- <td> 
-                        <label for="password">Password: </label>
-                    </td> -->
-                    <td> <input type="password" name="password" id="password" placeholder="Password">
-                    </td>
-                </tr>
-                <tr class="lgrow">
-                    <td>
-                        <button type="submit" name="loginbtn" id="loginbtn">
-                            Login
-                        </button>
-                    </td>
-
-                </tr>
-            </table>
-
-
-            <table class="register">
-
-            </table>
+            <div class="container">
+                <div class="box">
+                   <h1>Log In</h1>
+                   <div class="user">
+                      <i class="fas fa-user"></i>
+                      <input type="text" name="username" id="username" autocomplete="off" placeholder="username">
+                      <i class="fas fa-unlock-alt"></i>
+                      <input type="password" name="password" id="password" placeholder="password" autocomplete="off">
+                   </div>
+                   <p class="reset-password">Forget password?</p>
+                   <div class="login-btn">
+                      <button class="btn">Submit</button>
+                      <p class="signup">First time here?<span>Sign Up</span></p>
+                   </div>
+                </div>
+             </div>
         </form>
-
     </main>
     <!-- main content ends -->
     <!-- footer starts-->
