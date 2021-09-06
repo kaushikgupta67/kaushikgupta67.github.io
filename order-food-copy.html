@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS link -->
-    <link rel="stylesheet" href="styles/order-style.css">
+    <link rel="stylesheet" href="styles/order-style-copy.css">
     <link rel="stylesheet" href="styles/style.css">
 
     <!-- link for font : Playfair Display -->
@@ -21,7 +21,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
     <!-- icon-->
     <link rel="icon" href="media/logo.png" type="image/x-icon">
-    <script src="../JS/script.js"></script>
+
+    <!-- script for cat buttons -->
+    <script src="../JS/order-script.js"></script>
 
     <title>Cuisine Haveli</title>
 
@@ -63,7 +65,7 @@
         <section class="foodsearch" id="food-search">
             <form action="">
                 <!-- <img src="Images/searchbarimg.jpg" alt="searchbarimg" class="searchimg"> -->
-                <input type="searchitem" name="search" placeholder="Search for food Items">
+                <input type="search" name="search" placeholder="Search for food Items">
                 <input type="submit" name="submit" value="Search" class="btn">
             </form>
         </section>
@@ -71,46 +73,35 @@
 
         <!-- Category section starts -->
         <section class="category">
-            <a id="starters" onclick="fun(this.id)">
-                <div class="Starters cat float-responsive">
-                    <img src="media/starters.jpg" alt="starters">
-                    <h3 class="float-text text-white">Starters</h3>
-                </div>
-            </a>
-            <a id="soups" onclick="fun(this.id)">
-                <div class="Soups&Salads cat float-responsive">
-                    <img src="media/soupandsalads.jpeg" alt="starters">
-                    <h3 class="float-text text-white">Soups & Saladas</h3>
-                </div>
-            </a>
-            <a id="breads" onclick="fun(this.id)">
-                <div class="Breads cat float-responsive">
-                    <img src="media/bread.jpg" alt="starters">
-                    <h3 class="float-text text-white">Breads</h3>
-                </div>
-            </a>
-            <a id="rice" onclick="fun(this.id)">
-                <div class="Rice&Biriyani cat float-responsive">
-                    <img src="media/biriyani.jpg" alt="starters">
-                    <h3 class="float-text text-white">Rice & Biriyani</h3>
-                </div>
-            </a>
-            <a id="chinese" onclick="fun(this.id)">
-                <div class="Chinese cat float-responsive">
-                    <img src="media/chinese.jfif" alt="starters">
-                    <h3 class="float-text text-white">Chinese</h3>
-                </div>
-            </a>
-            <a id="desserts" onclick="fun(this.id)">
-                <div class="Desserts&Beverages cat float-responsive">
-                    <img src="media/desserts.jpg" alt="starters">
-                    <h3 class="float-text text-white">Desserts & Beverages</h3>
-                </div>
-            </a>
-            <!-- clearfix -->
-            <div class="clearfix">
-            </div>
+           <div class="catItem" onclick="" id="">
+            <img src="" alt="">
+            <span></span>
+           </div>
 
+           <div class="catItem">
+            <img src="" alt="">
+            <span></span>
+           </div>
+
+           <div class="catItem">
+            <img src="" alt="">
+            <span></span>
+           </div>
+
+           <div class="catItem">
+            <img src="" alt="">
+            <span></span>
+           </div>
+           
+           <div class="catItem">
+            <img src="" alt="">
+            <span></span>
+           </div>
+
+           <div class="catItem">
+            <img src="" alt="">
+            <span></span>
+           </div>
         </section>
         <!-- Category section ends -->
 
@@ -119,121 +110,13 @@
 
         <!-- Food Item section starts -->
         <section class="food-menu">
-            <h1>Food Menu</h1>
-            <div id="startersScroll" class="sub-cat">
-
-                <button onclick="fun('starters')" class="Cat-button">
-                    <h1>Starters</h1>
-                </button>
-
-                <div class="S">
-                    <div class="Itemimg">
-                        <img src="../media/crispycorn.jpg">
-                    </div>
-                    <div class="desc">
-                        <div class="itemname">
-                            <h3>Crispy Corn</h3>
-                        </div>
-                        <div class="itemprice">
-                            <h4>Rs: 180 /-</h4>
-                        </div>
-                        <div class="itemdesc">
-                            A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a
-                            perfect snack!.
-                        </div>
-                        <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
-                        <div class="Order-btn">
-                            <a href="">
-                                Order Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="S">
-                    <div class="Itemimg">
-                        <img src="../media/vegmanchuria.jpg">
-                    </div>
-                    <div class="desc">
-                        <div class="itemname">
-                            <h3>Veg Munchuria</h3>
-                        </div>
-                        <div class="itemprice">
-                            <h4>Rs: 280 /-</h4>
-                        </div>
-                        <div class="itemdesc">
-                            A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a
-                            perfect snack!.
-                        </div>
-                        <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
-                        <div class="Order-btn">
-                            <a href="">
-                                Order Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="S">
-                    <div class="Itemimg">
-                        <img src="../media/paneer65.jpg">
-                    </div>
-                    <div class="desc">
-                        <div class="itemname">
-                            <h3>Paneer 65</h3>
-                        </div>
-                        <div class="itemprice">
-                            <h4>Rs: 280 /-</h4>
-                        </div>
-                        <div class="itemdesc">
-                            A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a
-                            perfect snack!.
-                        </div>
-                        <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
-                        <div class="Order-btn">
-                            <a href="">
-                                Order Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="S">
-                    <div class="Itemimg">
-                        <img src="../media/chickencheesefries.jpg">
-                    </div>
-                    <div class="desc">
-                        <div class="itemname">
-                            <h3>Chicken Cheese Fries</h3>
-                        </div>
-                        <div class="itemprice">
-                            <h4>Rs: 385 /-</h4>
-                        </div>
-                        <div class="itemdesc">
-                            A delightfully flavorful dish prepared by deep frying corn to a perfect golden brown, a
-                            perfect snack!.
-                        </div>
-                        <div class="qty"> Qty: <input type="number" min=0 max=10> </div>
-                        <div class="Order-btn">
-                            <a href="">
-                                Order Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="clearfix">
-            </div>
-
-
-            <br>
-            <br>
-
-
-
-            <!-- All category sections ends Here -->
+           <div class="cat">
+               <div class="foodItem"></div>
+               <div class="foodItem"></div>
+               <div class="foodItem"></div>
+               <div class="foodItem"></div>
+           </div>
+          
         </section>
 
         <!-- Food Item section ends -->
