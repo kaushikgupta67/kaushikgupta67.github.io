@@ -1,216 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Hello WebXR!</title>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!--favicon -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../css/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../css/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../css/favicon/favicon-16x16.png">
-  <link rel="manifest" href="../../css/favicon/site.webmanifest">
-  <link rel="mask-icon" href="../../css/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-
-  <title>AR Shop Homepage - Lecture 7.3</title>
-
-  <!-- Bootstrap core CSS -->
-<!--   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-  <!-- Custom styles for this template -->
-<!--   <link href="css/shop-homepage.css" rel="stylesheet"> -->
-
+  <!-- three.js -->
+  <script src="https://unpkg.com/three@0.126.0/build/three.js"></script>
 </head>
-
 <body>
-    <script src="libs/fas.js"></script>
-    <script type="module">
-        import { App } from './app.js';
 
-        document.addEventListener("DOMContentLoaded", function(){
-            const app = new App();
-            window.app = app;
-        });
-    </script>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#"><img src="../../assets/ar-shop/logo-nav.jpg"/> Furniture.com</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Basket</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Support</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<!-- Starting an immersive WebXR session requires user interaction.
+    We start this one with a simple button. -->
+<button onclick="activateXR()">Start Hello WebXR</button>
+<script>
+async function activateXR() {
+  // Add a canvas element and initialize a WebGL context that is compatible with WebXR.
+  const canvas = document.createElement("canvas");
+  document.body.appendChild(canvas);
+  const gl = canvas.getContext("webgl", {xrCompatible: true});
 
-  <!-- Page Content -->
-  <div class="container">
+  // To be continued in upcoming steps.
+  const scene = new THREE.Scene();
 
-    <div class="row">
+// The cube will have a different color on each side.
+const materials = [
+  new THREE.MeshBasicMaterial({color: 0xff0000}),
+  new THREE.MeshBasicMaterial({color: 0x0000ff}),
+  new THREE.MeshBasicMaterial({color: 0x00ff00}),
+  new THREE.MeshBasicMaterial({color: 0xff00ff}),
+  new THREE.MeshBasicMaterial({color: 0x00ffff}),
+  new THREE.MeshBasicMaterial({color: 0xffff00})
+];
 
-      <div class="col-lg-3">
+// Create the cube and add it to the demo scene.
+const cube = new THREE.Mesh(new THREE.BoxBufferGeometry(0.2, 0.2, 0.2), materials);
+cube.position.set(1, 1, 1);
+scene.add(cube);
+  
+  // Set up the WebGLRenderer, which handles rendering to the session's base layer.
+const renderer = new THREE.WebGLRenderer({
+  alpha: true,
+  preserveDrawingBuffer: true,
+  canvas: canvas,
+  context: gl
+});
+renderer.autoClear = false;
 
-        <h1 class="my-4">Furniture.com</h1>
+// The API directly updates the camera matrices.
+// Disable matrix auto updates so three.js doesn't attempt
+// to handle the matrices independently.
+const camera = new THREE.PerspectiveCamera();
+camera.matrixAutoUpdate = false;
+  
+  // Initialize a WebXR session using "immersive-ar".
+const session = await navigator.xr.requestSession("immersive-ar");
+session.updateRenderState({
+  baseLayer: new XRWebGLLayer(session, gl)
+});
 
-      </div>
-      <!-- /.col-lg-3 -->
+// A 'local' reference space has a native origin that is located
+// near the viewer's position at the time the session was created.
+const referenceSpace = await session.requestReferenceSpace('local');
+  
+  // Create a render loop that allows us to draw on the AR view.
+const onXRFrame = (time, frame) => {
+  // Queue up the next draw request.
+  session.requestAnimationFrame(onXRFrame);
 
-      <div class="col-lg-9">
+  // Bind the graphics framebuffer to the baseLayer's framebuffer
+  gl.bindFramebuffer(gl.FRAMEBUFFER, session.renderState.baseLayer.framebuffer)
 
+  // Retrieve the pose of the device.
+  // XRFrame.getViewerPose can return null while the session attempts to establish tracking.
+  const pose = frame.getViewerPose(referenceSpace);
+  if (pose) {
+    // In mobile AR, we only have one view.
+    const view = pose.views[0];
 
-        <div class="row">
+    const viewport = session.renderState.baseLayer.getViewport(view);
+    renderer.setSize(viewport.width, viewport.height)
 
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="ar-shop/chair1.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item One</a>
-                </h4>
-                <h5>$84.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                <button class="ar-button" onclick="window.app.showChair(1);">View in your room</button>
-              </div>
-              
-            </div>
-          </div>
+    // Use the view's transform matrix and projection matrix to configure the THREE.camera.
+    camera.matrix.fromArray(view.transform.matrix)
+    camera.projectionMatrix.fromArray(view.projectionMatrix);
+    camera.updateMatrixWorld(true);
 
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="../../assets/ar-shop/chair2.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item Two</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                <button class="ar-button" onclick="window.app.showChair(2);"><i class="fas fa-camera"></i></button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="../../assets/ar-shop/chair3.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item Three</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                <button class="ar-button" onclick="window.app.showChair(3);"><i class="fas fa-camera"></i></button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="../../assets/ar-shop/chair4.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item Four</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                <button class="ar-button" onclick="window.app.showChair(4);"><i class="fas fa-camera"></i></button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="ar-shop/chair5.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item Five</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                <button class="ar-button" onclick="window.app.showChair(5);"><i class="fas fa-camera"></i></button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="../../assets/ar-shop/chair6.jpg" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item Six</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                <button class="ar-button" onclick="window.app.showChair(6);"><i class="fas fa-camera"></i></button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <!-- /.row -->
-
-      </div>
-      <!-- /.col-lg-9 -->
-
-    </div>
-    <!-- /.row -->
-
-  </div>
-  <!-- /.container -->
-
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p>
-    </div>
-    <!-- /.container -->
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
-<!--   <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
-
+    // Render the scene with THREE.WebGLRenderer.
+    renderer.render(scene, camera)
+  }
+}
+session.requestAnimationFrame(onXRFrame);
+  
+  
+}
+</script>
 </body>
-
 </html>
